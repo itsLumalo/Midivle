@@ -22,11 +22,7 @@ function checkIntroStage() {
     }
 }
 
-$(document).ready(function() {
-  $("introText").fadeIn();
-});
-
-$(document).ready(checkIntroStage())
+checkIntroStage()
 
 function loading1() {
   if (localStorage.getItem("inco?") == "true") {
