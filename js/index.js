@@ -1,11 +1,10 @@
 var introStage = 1
 var introComplete = localStorage.getItem("inco?")
 var loadingClock = 0
-window.onload = checkIntroStage()
-loading1()
+onload = checkIntroStage() 
 
 function checkIntroStage() {
-  if (localStorage.getItem("inco?") == null || "false") {
+  if (localStorage.getItem("inco?") == null) {
       if (introStage == 1) {
         document.getElementById("introText").innerHTML = "Welcome to Midivle!";
       } else {
@@ -47,7 +46,7 @@ function checkIntroStage() {
     setTimeout(loading2, 4000);
     setTimeout(loading3, 5000);
   }
-
+  
   if (localStorage.getItem("inco?") == null) {
     $('body').keyup(function(spacePressed) {
       if (spacePressed.keyCode == 32) {
