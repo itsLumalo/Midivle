@@ -7,8 +7,6 @@ loading1()
 function checkIntroStage() {
   if (localStorage.getItem("inco?") == null || "false") {
       if (introStage == 1) {
-        localStorage.setItem("inco?", "false")
-        console.log(introComplete)
         document.getElementById("introText").innerHTML = "Welcome to Midivle!";
       } else {
         if (introStage == 2) {
