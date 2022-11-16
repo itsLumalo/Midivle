@@ -1,9 +1,11 @@
 var introStage = 1
 var introComplete = localStorage.getItem("inco?")
 var loadingClock = 0
- 
+
+
+
 function checkIntroStage() {
-  if (localStorage.getItem("inco?") == null) {
+    if (localStorage.getItem("inco?") == null) {
       if (introStage == 1) {
         document.getElementById("introText").innerHTML = "Welcome to Midivle!";
       } else {
@@ -17,41 +19,43 @@ function checkIntroStage() {
         }
       }
     }
-  }
+}
 
-  $(document).ready(function() {
-    $("introText").fadeIn();
-  });
+$(document).ready(function() {
+  $("introText").fadeIn();
+});
 
-  function loading1() {
-    if (localStorage.getItem("inco?") == "true") {
-      document.getElementById("introText").innerHTML = "Loading."
-    }
-  }
+$(document).ready(checkIntroStage())
 
-  function loading2() {
-    document.getElementById("introText").innerHTML = "Loading.."
-  }
-
-  function loading3() {
-    document.getElementById("introText").innerHTML = "Loading..."
-  }
-
+function loading1() {
   if (localStorage.getItem("inco?") == "true") {
-    setTimeout(loading1, 0);
-    setTimeout(loading2, 1000);
-    setTimeout(loading3, 2000);
-    setTimeout(loading1, 3000);
-    setTimeout(loading2, 4000);
-    setTimeout(loading3, 5000);
+    document.getElementById("introText").innerHTML = "Loading."
   }
-  
-  if (localStorage.getItem("inco?") == null) {
-    $('body').keyup(function(spacePressed) {
-      if (spacePressed.keyCode == 32) {
-        introStage = introStage + 1;
-        checkIntroStage()
-        console.log(introStage);
-      }
-    });
-  }
+}
+
+function loading2() {
+  document.getElementById("introText").innerHTML = "Loading.."
+}
+
+function loading3() {
+  document.getElementById("introText").innerHTML = "Loading..."
+}
+
+if (localStorage.getItem("inco?") == "true") {
+  setTimeout(loading1, 0);
+  setTimeout(loading2, 1000);
+  setTimeout(loading3, 2000);
+  setTimeout(loading1, 3000);
+  setTimeout(loading2, 4000);
+  setTimeout(loading3, 5000);
+}
+
+if (localStorage.getItem("inco?") == null) {
+  $('body').keyup(function(spacePressed) {
+    if (spacePressed.keyCode == 32) {
+      introStage = introStage + 1;
+      checkIntroStage()
+      console.log(introStage);
+    }
+  });
+}
