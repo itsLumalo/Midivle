@@ -1,8 +1,7 @@
 var introStage = 1
 var introComplete = localStorage.getItem("inco?")
 var loadingClock = 0
-window.onload = checkIntroStage() {
-checkIntroStage()
+window.onload = checkIntroStage()
 loading1()
 
 function checkIntroStage() {
