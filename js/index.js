@@ -2,8 +2,7 @@ var introStage = 1
 var introComplete = localStorage.getItem("inco?")
 var loadingClock = 0
  
-
-onload = function checkIntroStage() {
+function checkIntroStage() {
   if (localStorage.getItem("inco?") == null) {
       if (introStage == 1) {
         document.getElementById("introText").innerHTML = "Welcome to Midivle!";
