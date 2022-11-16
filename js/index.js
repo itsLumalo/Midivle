@@ -5,9 +5,7 @@ var introStage = 1
 function checkIntroStage() {
     if (!localStorage.inco) {
       if (introStage == 1) {
-        document.addEventListener("DOMContentLoaded", e => {
           document.getElementById("introText").innerHTML = "Welcome to Midivle!";
-        })
       } else {
         if (introStage == 2) {
           document.getElementById("introText").innerHTML = "This is a game all about building you kingdom and ending others, building alliances and ending alliances, hiring and firing, and saving lives and ending them too.  ";
