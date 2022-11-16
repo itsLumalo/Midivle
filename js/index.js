@@ -10,15 +10,11 @@ function checkIntroStage() {
       })
     } else {
       if (introStage == 2) {
-        document.addEventListener("DOMContentLoaded", e => {
           document.getElementById("introText").innerHTML = "This is a game all about building you kingdom and ending others, building alliances and ending alliances, hiring and firing, and saving lives and ending them too.  ";
-        })
       } else {
         if (introStage == 3) {
-          document.addEventListener("DOMContentLoaded", e => {
             document.getElementById("introText").innerHTML = "Have fun and dont forget, only the best kingdom will rise!"
             localStorage.inco = true;
-          })
         }
       }
     }
