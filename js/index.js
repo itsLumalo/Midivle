@@ -48,8 +48,8 @@ if (localStorage.inco) {
 }
 
 if (!localStorage.inco) {
-  $('body').keyup(function(spacePressed) {
-    if (spacePressed.keyCode == 32) {
+  $('body').keyup(function(evt) {
+    if (evt.key === " " || evt.key === "Space" || evt.keyCode === 32) {
       // Why write this:
       // introStage = introStage + 1;
       // when you could use this:
