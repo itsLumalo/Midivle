@@ -23,20 +23,22 @@ function checkIntroStage() {
 
 checkIntroStage()
 
+let add = ""
+
 function loading1() {
   if (localStorage.inco === true) {
-    document.getElementById("introText").innerHTML = "Loading."
+    document.getElementById("introText").innerHTML = "Loading." + add
   }
   setTimeout(loading1, 3000)
 }
 
 function loading2() {
-  document.getElementById("introText").innerHTML = "Loading.."
+  document.getElementById("introText").innerHTML = "Loading.." + add
   setTimeout(loading2, 3000)
 }
 
 function loading3() {
-  document.getElementById("introText").innerHTML = "Loading..."
+  document.getElementById("introText").innerHTML = "Loading..." + add
   setTimeout(loading3, 3000)
 }
 
@@ -44,6 +46,7 @@ if (localStorage.inco) {
   setTimeout(loading1, 0);
   setTimeout(loading2, 1000);
   setTimeout(loading3, 2000);
+  setTimeout(() => add = "<br>If you see this for a while, please try refreshing the page.", 10000)
 }
 
 if (!localStorage.inco) {

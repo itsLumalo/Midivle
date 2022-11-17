@@ -16,5 +16,6 @@ body {
   color: #ffffff;
 }
 
-.introText {}
- 
+.yesscript {
+  display: none;
+}
