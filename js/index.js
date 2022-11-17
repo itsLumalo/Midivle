@@ -49,12 +49,13 @@ if (localStorage.inco) {
   setTimeout(() => add = "<br>If you see this for a while, please try refreshing the page.", 10000)
 }
 
-if (!localStorage.inco) {
-  $('body').keyup(function(spacePressed) {
-    if (spacePressed.keyCode == 32) {
-      introStage = introStage + 1;
+document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||      
+      e.keyCode == 32      
+  ) {
+          introStage = introStage + 1;
       checkIntroStage()
       console.log(introStage);
-    }
-  });
+  }
 }
