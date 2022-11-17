@@ -50,9 +50,14 @@ if (localStorage.inco) {
 if (!localStorage.inco) {
   $('body').keyup(function(spacePressed) {
     if (spacePressed.keyCode == 32) {
-      introStage = introStage + 1;
+      // Why write this:
+      // introStage = introStage + 1;
+      // when you could use this:
+      // introStage += 1
+      // If the right side is 1, you can also use this:
+      introStage++
       checkIntroStage()
-      console.log(introStage);
+      // console.log(introStage);
     }
   });
 }
