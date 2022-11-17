@@ -46,7 +46,7 @@ if (localStorage.inco) {
   setTimeout(loading1, 0);
   setTimeout(loading2, 1000);
   setTimeout(loading3, 2000);
-  setTimeout(() => add = "<br>If you see this for a while, please try refreshing the page."), 10000)
+  setTimeout(() => add = "<br>If you see this for a while, please try refreshing the page.", 10000)
 }
 
 if (!localStorage.inco) {
