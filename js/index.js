@@ -7,6 +7,7 @@ const introTexts = [
   "This is a game all about building you kingdom and ending others, building alliances and ending alliances, hiring and firing, and saving lives and ending them too.",
   "Have fun and don't forget, only the best kingdom will rise!"
 ]
+
 function checkIntroStage() {
   if (!localStorage.inco) {
     let spaceMessage = ""
@@ -25,7 +26,7 @@ let add = ""
 
 function loading1() {
   // if (localStorage.inco === true) {
-    document.getElementById("introText").innerHTML = "Loading." + add
+  document.getElementById("introText").innerHTML = "Loading." + add
   // }
   setTimeout(loading1, 3000)
 }
@@ -60,4 +61,12 @@ if (!localStorage.inco) {
       // console.log(introStage);
     }
   });
+}
+
+function resetIncoAlert() {
+  if (confirm("Only use if page is not loading!") == true) {
+    delete localStorage.inco
+  } else {
+    document.getElementById("cancelText").innerHTML = "Reset Was Canceled" 
+    }
 }
