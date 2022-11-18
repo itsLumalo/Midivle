@@ -67,6 +67,6 @@ function resetIncoAlert() {
   if (confirm("Only use if page is not loading!") == true) {
     delete localStorage.inco
   } else {
-    document.getElementById("cancelText").innerHTML = "Reset Was Canceled" 
+    return document.getElementById("cancelText").innerHTML = "Reset Was Canceled" 
     }
 }
