@@ -33,7 +33,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Rewrite script tags pointing to development libraries
-        run: sed -e 's,lib/development,lib/production,g' -i "**.html"
+        run: sed -e 's,lib/development,lib/production,g' -i **.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
