@@ -4,18 +4,30 @@ body {
   padding: 0;
 }
 
-.screen {
+.introScreen div {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.introScreen a {
+  text-align: left;
+  vertical-align: text-bottom;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3px;
+}
+
+.introScreen #cancelText {
+  color: #FF0000;
+}
+
+.introScreen {
   height: 100vh;
   width: 100vw;
   border: 0px solid lightgreen;
-  text-align: center;
-  min-height: 10em;
   display: table-cell;
   vertical-align: middle;
   background: #093145;
   color: #ffffff;
-}
-
-.yesscript {
-  display: none;
 }
