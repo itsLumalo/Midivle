@@ -1,6 +1,6 @@
 let introStage = 0
 let loadingClock = 0
-let hasItfinishedLoading = false
+var hasItfinishedLoading = false
 
 const introTexts = [
   "Welcome to Midivle!",
@@ -80,3 +80,5 @@ function finishedLoading() {
   document.getElementById("resetLink").hidden = true
   hasItFinishedLoading = true
 }
+
+module.exports = {hasItFinishedLoading};
