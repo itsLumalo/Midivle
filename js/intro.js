@@ -1,6 +1,6 @@
 let introStage = 0
 let loadingClock = 0
-var hasItfinishedLoading = false
+window.hasItfinishedLoading = false
 
 const introTexts = [
   "Welcome to Midivle!",
