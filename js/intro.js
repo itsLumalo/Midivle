@@ -87,7 +87,3 @@ function resetIncoAlert() {
     return false
   }
 }
-
-function gameStart() {
-  console.log("yay")
-}
