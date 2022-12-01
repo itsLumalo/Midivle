@@ -78,7 +78,7 @@ function finishedLoading() {
   document.getElementById("introText").hidden = true
   document.getElementById("cancelText").hidden = true
   document.getElementById("resetLink").hidden = true
-  hasItFinishedLoading = true
+  gameStart()
 }
 
 module.exports = {hasItFinishedLoading};
