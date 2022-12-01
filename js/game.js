@@ -1,3 +1,3 @@
-if (hasItfinishedLoading == true){
-  alert("Finished Loading!")
+function gameStart () {
+ alert("It Worked!")
 }
