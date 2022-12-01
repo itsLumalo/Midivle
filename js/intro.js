@@ -1,6 +1,6 @@
 let introStage = 0
 let loadingClock = 0
-window.hasItfinishedLoading = false
+var hasItfinishedLoading = false
 
 const introTexts = [
   "Welcome to Midivle!",
@@ -29,24 +29,30 @@ checkIntroStage()
 let add = ""
 
 function loading1() {
+if (hasItfinishedLoading == false){
   document.getElementById("introText").innerHTML = "Loading." + add
   setTimeout(loading1, 3000)
+  }
 }
 
 function loading2() {
+if (hasItfinishedLoading == false){
   document.getElementById("introText").innerHTML = "Loading.." + add
   setTimeout(loading2, 3000)
+}
 }
 
 function loading3() {
   document.getElementById("introText").innerHTML = "Loading..." + add
   setTimeout(loading3, 3000)
+  if (hasItfinishedLoading == false){
   if (loadingClock == 3) {
-    finishedLoading()
+      finishedLoading()
   } else {
     loadingClock++
     console.log(loadingClock)
   }
+}
 }
 
 if (localStorage.inco) {
@@ -80,5 +86,3 @@ function finishedLoading() {
   document.getElementById("resetLink").hidden = true
   gameStart()
 }
-
-module.exports = {hasItFinishedLoading};
