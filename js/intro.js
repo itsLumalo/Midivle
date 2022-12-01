@@ -1,6 +1,6 @@
 let introStage = 0
 let loadingClock = 0
-var hasItfinishedLoading = false
+let hasItfinishedLoading = false
 
 const introTexts = [
   "Welcome to Midivle!",
@@ -14,9 +14,9 @@ function checkIntroStage() {
     let spaceMessage = ""
     if (introStage == 4) {
       localStorage.inco = true
-       setTimeout(loading1, 0);
-       setTimeout(loading2, 1000);
-       setTimeout(loading3, 2000);
+      setTimeout(loading1, 0);
+      setTimeout(loading2, 1000);
+      setTimeout(loading3, 2000);
     } else {
       spaceMessage = " (Press Space)"
     }
@@ -29,31 +29,39 @@ checkIntroStage()
 let add = ""
 
 function loading1() {
-if (hasItfinishedLoading == false){
-  document.getElementById("introText").innerHTML = "Loading." + add
-  setTimeout(loading1, 3000)
+  if (hasItfinishedLoading == false) {
+    document.getElementById("introText").innerHTML = "Loading." + add
+    setTimeout(loading1, 3000)
   }
 }
 
 function loading2() {
-if (hasItfinishedLoading == false){
-  document.getElementById("introText").innerHTML = "Loading.." + add
-  setTimeout(loading2, 3000)
-}
+  if (hasItfinishedLoading == false) {
+    document.getElementById("introText").innerHTML = "Loading.." + add
+    setTimeout(loading2, 3000)
+  }
 }
 
 function loading3() {
+  if (hasItfinishedLoading == false) {
   document.getElementById("introText").innerHTML = "Loading..." + add
   setTimeout(loading3, 3000)
-  if (hasItfinishedLoading == false){
-  if (loadingClock == 3) {
-      finishedLoading()
-  } else {
-    loadingClock++
-    console.log(loadingClock)
+  loadingClock++
+  console.log(loadingClock)
+  checkIfDone()
   }
 }
+
+function checkIfDone() {
+  if (loadingClock == 3) {
+    document.getElementById("introText").hidden = true
+    document.getElementById("cancelText").hidden = true
+    document.getElementById("resetLink").hidden = true
+    hasItfinishedLoading = true
+    gameStart()
+  }
 }
+
 
 if (localStorage.inco) {
   setTimeout(loading1, 0);
@@ -80,9 +88,6 @@ function resetIncoAlert() {
   }
 }
 
-function finishedLoading() {
-  document.getElementById("introText").hidden = true
-  document.getElementById("cancelText").hidden = true
-  document.getElementById("resetLink").hidden = true
-  gameStart()
+function gameStart() {
+  console.log("yay")
 }
